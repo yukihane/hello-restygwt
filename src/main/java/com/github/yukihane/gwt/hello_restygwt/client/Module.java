@@ -34,6 +34,8 @@ public class Module implements EntryPoint {
      */
     private final GreetingServiceAsync greetingService = GWT.create(GreetingService.class);
 
+    private PizzaService service = GWT.create(PizzaService.class);
+
     private final Messages messages = GWT.create(Messages.class);
 
     /**
