@@ -1,6 +1,8 @@
 package com.github.yukihane.gwt.hello_restygwt.client;
 
 import com.github.yukihane.gwt.hello_restygwt.shared.FieldVerifier;
+import com.github.yukihane.gwt.hello_restygwt.shared.OrderConfirmation;
+import com.github.yukihane.gwt.hello_restygwt.shared.PizzaOrder;
 import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.event.dom.client.ClickEvent;

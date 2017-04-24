@@ -1,5 +1,7 @@
 package com.github.yukihane.gwt.hello_restygwt.client;
 
+import com.github.yukihane.gwt.hello_restygwt.shared.OrderConfirmation;
+import com.github.yukihane.gwt.hello_restygwt.shared.PizzaOrder;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import org.fusesource.restygwt.client.MethodCallback;

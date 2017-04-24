@@ -1,4 +1,4 @@
-package com.github.yukihane.gwt.hello_restygwt.client;
+package com.github.yukihane.gwt.hello_restygwt.shared;
 
 public class Pizza {
 

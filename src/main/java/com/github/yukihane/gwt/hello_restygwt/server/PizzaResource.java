@@ -1,8 +1,8 @@
 package com.github.yukihane.gwt.hello_restygwt.server;
 
-import com.github.yukihane.gwt.hello_restygwt.client.OrderConfirmation;
-import com.github.yukihane.gwt.hello_restygwt.client.Pizza;
-import com.github.yukihane.gwt.hello_restygwt.client.PizzaOrder;
+import com.github.yukihane.gwt.hello_restygwt.shared.OrderConfirmation;
+import com.github.yukihane.gwt.hello_restygwt.shared.Pizza;
+import com.github.yukihane.gwt.hello_restygwt.shared.PizzaOrder;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
