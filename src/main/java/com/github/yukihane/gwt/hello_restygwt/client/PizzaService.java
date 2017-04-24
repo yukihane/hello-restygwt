@@ -1,14 +1,12 @@
 package com.github.yukihane.gwt.hello_restygwt.client;
 
 import javax.ws.rs.POST;
-
+import javax.ws.rs.Path;
 import org.fusesource.restygwt.client.MethodCallback;
 import org.fusesource.restygwt.client.RestService;
 
-import com.google.gwt.editor.client.Editor.Path;
-
+@Path("/pizza")
 public interface PizzaService extends RestService {
     @POST
-    @Path("pizzaorders")
     public void order(PizzaOrder request, MethodCallback<OrderConfirmation> callback);
 }
