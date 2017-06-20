@@ -18,6 +18,7 @@ import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.RootLayoutPanel;
 import com.google.gwt.user.client.ui.TextBox;
 import com.google.gwt.user.client.ui.VerticalPanel;
+import java.util.logging.Logger;
 import org.fusesource.restygwt.client.Defaults;
 import org.fusesource.restygwt.client.Method;
 import org.fusesource.restygwt.client.MethodCallback;
@@ -26,6 +27,9 @@ import org.fusesource.restygwt.client.MethodCallback;
  * Entry point classes define <code>onModuleLoad()</code>.
  */
 public class Module implements EntryPoint {
+
+    private static final Logger LOGGER = Logger.getLogger(Module.class.getName());
+
     /**
      * The message displayed to the user when the server cannot be reached or
      * returns an error.
@@ -152,6 +156,8 @@ public class Module implements EntryPoint {
 
                     @Override
                     public void onSuccess(final Method method, final OrderConfirmation response) {
+                        LOGGER.info("text: " + method.getResponse().getText());
+                        LOGGER.info("obj: " + response.getTotal() + ", " + response.getOrder());
                         dialogBox.setText("Remote Procedure Call");
                         serverResponseLabel.removeStyleName("serverResponseLabelError");
                         serverResponseLabel.setText("" + response.getTotal());

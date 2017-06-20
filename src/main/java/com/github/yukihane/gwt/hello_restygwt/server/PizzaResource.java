@@ -1,6 +1,7 @@
 package com.github.yukihane.gwt.hello_restygwt.server;
 
 import com.github.yukihane.gwt.hello_restygwt.shared.OrderConfirmation;
+import com.github.yukihane.gwt.hello_restygwt.shared.OrderConfirmationNise;
 import com.github.yukihane.gwt.hello_restygwt.shared.Pizza;
 import com.github.yukihane.gwt.hello_restygwt.shared.PizzaOrder;
 import java.util.Collections;
@@ -41,17 +42,25 @@ public class PizzaResource {
     }
 
     @POST
-    public OrderConfirmation order(final PizzaOrder order) {
-        final String id = order.getPizzaId();
-        final Pizza pizza = pizzas.get(id);
-        final int price = pizza.getPrice();
-        final int total = price * order.getNumber();
+    public OrderConfirmationNise order(final PizzaOrder order) {
+        // final String id = order.getPizzaId();
+        // final Pizza pizza = pizzas.get(id);
+        // final int price = pizza.getPrice();
+        // final int total = price * order.getNumber();
+        //
+        // final OrderConfirmation confirm = new OrderConfirmation();
+        // confirm.setOrder(order);
+        // confirm.setTotal(total);
+        //
+        // return confirm;
 
-        final OrderConfirmation confirm = new OrderConfirmation();
-        confirm.setOrder(order);
-        confirm.setTotal(total);
+        final OrderConfirmationNise ret = new OrderConfirmationNise();
+        ret.setText("hello");
+        ret.setText2("world");
+        ret.setAge(200);
+        ret.setTotal(500);
 
-        return confirm;
+        return ret;
     }
 
 }
